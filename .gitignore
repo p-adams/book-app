@@ -1,2 +1,4 @@
 resources/public/cljs-out
 target
+.clj-kondo
+.lsp
