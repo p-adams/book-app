@@ -6,7 +6,7 @@ import com.google.gson.reflect.TypeToken
 
 data class MenuItem(val id: Int, val name: String, val description: String, val price: Float)
 
-typealias MenuList = List<MenuItem>
+typealias MenuList = List<MenuItem>?
 
 fun buildMenu(): MenuList {
     println("building menu...")

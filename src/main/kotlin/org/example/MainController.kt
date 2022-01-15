@@ -1,6 +1,7 @@
 package org.example
 class MainController() {
+    private var menu: MenuList = null
     init {
-        buildMenu()
+        menu = buildMenu()
     }
 }
