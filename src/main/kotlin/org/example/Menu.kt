@@ -9,6 +9,7 @@ data class MenuItem(val id: Int, val name: String, val description: String, val 
 typealias MenuList = List<MenuItem>
 
 fun buildMenu(): MenuList {
+    println("building menu...")
     val listMenuType = object : TypeToken<MenuList>() {}.type
     return Gson().fromJson(
         File("src/main/kotlin/org/example", "menu.json").readText(),
