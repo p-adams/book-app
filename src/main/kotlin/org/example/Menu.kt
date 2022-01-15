@@ -11,7 +11,5 @@ fun buildMenu(): List<MenuItem> {
     val menuData = File("src/main/kotlin/org/example", "menu.json").readText()
     val listMenuType = object : TypeToken<List<MenuItem>>() {}.type
     val menuItems: List<MenuItem> = Gson().fromJson(menuData, listMenuType)
-
-    val menu = listOf<MenuItem>()
-    return menu
+    return menuItems
 }
