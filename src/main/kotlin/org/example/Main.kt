@@ -7,7 +7,7 @@ import javafx.stage.Stage
 
 class RestaurantApp : Application() {
     override fun start(stage: Stage) {
-        val restaurantApp = MainController()
+        val menu = buildMenu()
         stage.title = "Restaurant App"
         stage.scene = Scene(StackPane(), 400.0, 400.0)
         stage.show()
