@@ -4,8 +4,14 @@ import neo4jDriver from "neo4j-driver";
 const neo4j = neo4jDriver;
 
 const typeDefs = gql`
+  type Menu {
+    name: String!
+    menuItems: [MenuItem!] @relationship(type: "FEATURED_IN", direction: IN)
+  }
+
   type MenuItem {
-    name: String
+    name: String!
+    featuredInMenu: [Menu!] @relationship(type: "FEATURED_IN", direction: OUT)
   }
 `;
 
