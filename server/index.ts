@@ -30,6 +30,8 @@ const typeDefs = gql`
   type MenuItem {
     id: ID!
     name: String!
+    price: Float!
+    description: String!
     featuredInMenu: [Menu!] @relationship(type: "FEATURED_IN", direction: OUT)
   }
 `;
