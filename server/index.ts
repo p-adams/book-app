@@ -5,12 +5,30 @@ import "dotenv/config";
 const neo4j = neo4jDriver;
 
 const typeDefs = gql`
+
+  type Restaurants {
+    id: ID!
+    restaurants: [Restaurant!] @relationship(type "INCLUDED_IN", direction: IN)
+  }
+
+
+  type Restaurant {
+    id: ID!
+    name: String!
+    menus: [Menu!] @relationship(type "INCLUDED_IN", direction: OUT)
+    location: String!
+    contact: String!
+  }
+
+
   type Menu {
+    id: ID!
     name: String!
     menuItems: [MenuItem!] @relationship(type: "FEATURED_IN", direction: IN)
   }
 
   type MenuItem {
+    id: ID!
     name: String!
     featuredInMenu: [Menu!] @relationship(type: "FEATURED_IN", direction: OUT)
   }
