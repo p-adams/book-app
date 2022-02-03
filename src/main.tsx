@@ -2,13 +2,16 @@ import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
 import App from "./App";
+import ApolloWrapper from "./apollo-wrapper";
 
 const container = document.getElementById("root");
 
 const root = ReactDOM.createRoot(container as HTMLDivElement);
 
 root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
+  <ApolloWrapper>
+    <React.StrictMode>
+      <App />
+    </React.StrictMode>
+  </ApolloWrapper>
 );
