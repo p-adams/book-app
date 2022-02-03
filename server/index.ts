@@ -6,7 +6,7 @@ const neo4j = neo4jDriver;
 
 const typeDefs = gql`
 
-  type Restaurants {
+  type RestaurantApp {
     id: ID!
     restaurants: [Restaurant!] @relationship(type "INCLUDED_IN", direction: IN)
   }
