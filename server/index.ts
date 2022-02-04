@@ -33,7 +33,27 @@ const typeDefs = gql`
     price: Float!
     description: String!
     featuredInMenu: [Menu!] @relationship(type: "FEATURED_IN", direction: OUT)
+    nutritionFacts: NutritionFacts!
   }
+
+  type NutritionFacts {
+    id: ID!
+    servingSize: String
+    servingsPer: String
+    amountPer: String
+    tableValues: NutritionFactTableValue! @relationship(type: "NUTRITION_FACTS_OF", direction: OUT)
+  }
+
+  type NutritionFactTableValue {
+    label: String!
+    weight: Float!
+    unitOfMeasure: String!
+    dailyValuePercentage: Float!
+    facts: NutritionFacts! @relationship(type: "NUTRITION_FACTS_OF", direction: OUT)
+    meta: [String]
+  }
+
+
 `;
 
 const driver = neo4j.driver(
