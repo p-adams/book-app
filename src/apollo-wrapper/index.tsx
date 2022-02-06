@@ -5,6 +5,7 @@ import {
   useQuery,
   gql,
 } from "@apollo/client";
+const ENDPOINT = import.meta.env.VITE_DB_ENDPOINT;
 
 const client = new ApolloClient({
   uri: "https://48p1r2roz4.sse.codesandbox.io",

@@ -17,7 +17,7 @@ function App() {
           </section>
           {data?.rates.map(
             ({ currency, rate }: { currency: string; rate: number }) => (
-              <div>
+              <div key={currency}>
                 {currency} : {rate}
               </div>
             )
