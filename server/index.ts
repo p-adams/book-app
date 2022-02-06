@@ -16,8 +16,21 @@ const typeDefs = gql`
     id: ID!
     name: String!
     menus: [Menu!] @relationship(type "INCLUDED_IN", direction: OUT)
-    location: String!
-    contact: String!
+    location: Location!
+    contact: Contact!
+  }
+
+  type Contact {
+    phone: Int!
+    email: String!
+    post: Location!
+  }
+
+  type Location {
+    address1: String!
+    city: String!
+    state: String!
+    zip: Int!
   }
 
 
