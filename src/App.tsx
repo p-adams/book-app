@@ -1,8 +1,7 @@
 import { useQuery } from "@apollo/client";
-import { useState } from "react";
 import { EXCHANGE_RATES } from "./apollo-wrapper";
+import { mockRestaurantData } from "./api";
 import "./App.css";
-EXCHANGE_RATES;
 function App() {
   const { data, loading, error } = useQuery(EXCHANGE_RATES);
   if (loading) return <div>Loading...</div>;
@@ -12,16 +11,12 @@ function App() {
       <header className="App-header"></header>
       <main>
         <article>
+          <header>Restaurant App</header>
           <section>
-            <h3>home page</h3>
+            {mockRestaurantData().restaurants.map((restaurant) => {
+              return <div key={restaurant.id}>{restaurant.name}</div>;
+            })}
           </section>
-          {data?.rates.map(
-            ({ currency, rate }: { currency: string; rate: number }) => (
-              <div key={currency}>
-                {currency} : {rate}
-              </div>
-            )
-          )}
         </article>
       </main>
       <footer></footer>

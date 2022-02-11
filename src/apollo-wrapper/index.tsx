@@ -22,7 +22,7 @@ client
       }
     `,
   })
-  .then((result) => console.log(result));
+  .then();
 
 export const EXCHANGE_RATES = gql`
   query GetExchangeRates {

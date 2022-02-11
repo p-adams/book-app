@@ -1,3 +1,4 @@
+import { makeVar } from "@apollo/client";
 export const MOCK_DATA = {
   id: "Bedrock Restaurants",
   restaurants: [
@@ -37,3 +38,5 @@ export const MOCK_DATA = {
     },
   ],
 };
+
+export const mockRestaurantData = makeVar(MOCK_DATA);
