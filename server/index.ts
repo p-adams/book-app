@@ -5,17 +5,15 @@ import "dotenv/config";
 const neo4j = neo4jDriver;
 
 const typeDefs = gql`
-
   type RestaurantApp {
     id: ID!
-    restaurants: [Restaurant!] @relationship(type "INCLUDED_IN", direction: IN)
+    restaurants: [Restaurant!] @relationship(type: "INCLUDED_IN", direction: IN)
   }
-
 
   type Restaurant {
     id: ID!
     name: String!
-    menus: [Menu!] @relationship(type "INCLUDED_IN", direction: OUT)
+    menus: [Menu!] @relationship(type: "INCLUDED_IN", direction: OUT)
     location: Location!
     contact: Contact!
   }
@@ -32,7 +30,6 @@ const typeDefs = gql`
     state: String!
     zip: Int!
   }
-
 
   type Menu {
     id: ID!
@@ -54,7 +51,8 @@ const typeDefs = gql`
     servingSize: String
     servingsPer: String
     amountPer: String
-    tableValues: NutritionFactTableValue! @relationship(type: "NUTRITION_FACTS_OF", direction: OUT)
+    tableValues: NutritionFactTableValue!
+      @relationship(type: "NUTRITION_FACTS_OF", direction: OUT)
   }
 
   type NutritionFactTableValue {
@@ -62,11 +60,10 @@ const typeDefs = gql`
     weight: Float!
     unitOfMeasure: String!
     dailyValuePercentage: Float!
-    facts: NutritionFacts! @relationship(type: "NUTRITION_FACTS_OF", direction: OUT)
+    facts: NutritionFacts!
+      @relationship(type: "NUTRITION_FACTS_OF", direction: OUT)
     meta: [String]
   }
-
-
 `;
 
 const driver = neo4j.driver(

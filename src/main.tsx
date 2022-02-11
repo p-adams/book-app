@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
-import App from "./App";
+import App from "./components/App";
 import ApolloWrapper from "./apollo-wrapper";
 
 const container = document.getElementById("root");
