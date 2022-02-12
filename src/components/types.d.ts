@@ -1,8 +1,8 @@
 interface NavElement {
   label: string;
   link: {
-    href: string;
-    isAbsolute?: boolean;
+    href?: string;
+    path?: string;
   };
   icon?: JSX.Element | string; // path
 }

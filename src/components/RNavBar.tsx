@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 function RNavbar(props: NavOptions) {
   return (
     <nav className="r-navbar-wrapper">
@@ -8,10 +10,14 @@ function RNavbar(props: NavOptions) {
           listStyle: "none",
         }}
       >
-        {props.navElements.map(({ label, link: { href } }) => {
+        {props.navElements.map(({ label, link: { href, path } }) => {
           return (
             <li key={label}>
-              <a href={href}>{label}</a>
+              {href ? (
+                <a href={href}>{label}</a>
+              ) : (
+                <Link to={path ?? ""}>{label}</Link>
+              )}
             </li>
           );
         })}
