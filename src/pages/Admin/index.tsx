@@ -20,11 +20,9 @@ function AdminPage() {
                   }
                 />
               ) : (
-                <Outlet />
+                <Outlet context={[isAuthenticated, setIsAuthenticated]} />
               )
-            ) : (
-              <p>other content</p>
-            )}
+            ) : null}
           </section>
         </section>
       </article>
