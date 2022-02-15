@@ -1,7 +1,10 @@
 import { useState } from "react";
-import { Outlet } from "react-router-dom";
+import { Outlet, useOutletContext } from "react-router-dom";
 import SignInForm from "./SignInForm";
-
+type ContextType = {
+  isAuthenticated: boolean;
+  setIsAuthenticated: (isAuthenticated: boolean) => void;
+};
 function AdminPage() {
   const [isMember, setIsMember] = useState(true);
   const [isAuthenticated, setIsAuthenticated] = useState(false);
@@ -20,7 +23,7 @@ function AdminPage() {
                   }
                 />
               ) : (
-                <Outlet context={[isAuthenticated, setIsAuthenticated]} />
+                <Outlet context={{ isAuthenticated, setIsAuthenticated }} />
               )
             ) : null}
           </section>
@@ -28,6 +31,10 @@ function AdminPage() {
       </article>
     </div>
   );
+}
+
+export function useAuth() {
+  return useOutletContext<ContextType>();
 }
 
 export default AdminPage;

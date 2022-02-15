@@ -1,7 +1,8 @@
 import { useOutletContext } from "react-router-dom";
-
+import { useAuth } from "./index";
 function SignUpForm() {
-  const [_, setIsAuthenticated] = useOutletContext() as any;
+  const { setIsAuthenticated } = useAuth();
+
   const authenticate = () => setIsAuthenticated(true);
   return (
     <form>
