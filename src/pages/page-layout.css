@@ -1,0 +1,20 @@
+.page-layout-wrapper {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.page-layout-wrapper header {
+  min-height: 80px;
+  display: flex;
+}
+
+.page-layout-wrapper article {
+  flex-grow: 1;
+  overflow: auto;
+  background-color: lightgray;
+}
+
+.page-layout-wrapper footer {
+  min-height: 80px;
+}

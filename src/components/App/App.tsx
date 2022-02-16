@@ -4,7 +4,7 @@ import { mockRestaurantData } from "../../api";
 import RNavbar from "../RNavBar/RNavBar";
 import AboutPage from "../../pages/About";
 import "./App.css";
-import { Link, Route, Routes } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 import AppLayout from "../../pages/AppLayout";
 import NotFound from "../../pages/NotFound";
 import MenuPage from "../../pages/Menu";
