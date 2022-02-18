@@ -9,27 +9,25 @@ function AdminPage() {
   const [isMember, setIsMember] = useState(true);
   const [isAuthenticated, setIsAuthenticated] = useState(false);
   return (
-    <div>
-      <article>
+    <article>
+      <section className="main">
+        admin page {JSON.stringify(isAuthenticated)}
         <section>
-          admin page {JSON.stringify(isAuthenticated)}
-          <section>
-            {!isAuthenticated ? (
-              isMember ? (
-                <SignInForm
-                  onIsMemberClicked={(isMember) => setIsMember(isMember)}
-                  onAuthenticate={(isAuthenticated) =>
-                    setIsAuthenticated(isAuthenticated)
-                  }
-                />
-              ) : (
-                <Outlet context={{ isAuthenticated, setIsAuthenticated }} />
-              )
-            ) : null}
-          </section>
+          {!isAuthenticated ? (
+            isMember ? (
+              <SignInForm
+                onIsMemberClicked={(isMember) => setIsMember(isMember)}
+                onAuthenticate={(isAuthenticated) =>
+                  setIsAuthenticated(isAuthenticated)
+                }
+              />
+            ) : (
+              <Outlet context={{ isAuthenticated, setIsAuthenticated }} />
+            )
+          ) : null}
         </section>
-      </article>
-    </div>
+      </section>
+    </article>
   );
 }
 

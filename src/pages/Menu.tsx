@@ -1,7 +1,7 @@
 function MenuPage() {
   return (
     <article>
-      <section>menu page</section>
+      <section className="main">menu page</section>
     </article>
   );
 }

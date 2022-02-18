@@ -1,7 +1,7 @@
 function AboutPage() {
   return (
     <article>
-      <section>about page</section>
+      <section className="main">about page</section>
     </article>
   );
 }

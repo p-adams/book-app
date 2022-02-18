@@ -4,7 +4,7 @@ import "./page-layout.css";
 function AppLayout() {
   return (
     <div className="page-layout-wrapper">
-      <header>
+      <header className="page-header">
         {/** if isAdmin show Admin label next to title */}
         <Link to="/">Restaurant App</Link>
         <RNavbar
@@ -25,7 +25,6 @@ function AppLayout() {
           ]}
         />
       </header>
-
       <Outlet />
       <footer>footer</footer>
     </div>

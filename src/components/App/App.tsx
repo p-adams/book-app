@@ -4,13 +4,14 @@ import { mockRestaurantData } from "../../api";
 import RNavbar from "../RNavBar/RNavBar";
 import AboutPage from "../../pages/About";
 import "./App.css";
-import { Route, Routes } from "react-router-dom";
+import { Link, Route, Routes } from "react-router-dom";
 import AppLayout from "../../pages/AppLayout";
 import NotFound from "../../pages/NotFound";
 import MenuPage from "../../pages/Menu";
 import ContactPage from "../../pages/Contact";
 import AdminPage from "../../pages/Admin";
 import SignUpForm from "../../pages/Admin/SignupForm";
+import HomePage from "../../pages/Home";
 function App() {
   /* TODO: re-implement once querying restaurant app endpoint
   // const { data, loading, error } = useQuery(EXCHANGE_RATES);
@@ -21,6 +22,7 @@ function App() {
     <div className="App">
       <Routes>
         <Route path="/" element={<AppLayout />}>
+          <Route index element={<HomePage />}></Route>
           <Route path="about" element={<AboutPage />}></Route>
           <Route path="menu" element={<MenuPage />}></Route>
           <Route path="contact" element={<ContactPage />}></Route>
