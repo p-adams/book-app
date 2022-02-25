@@ -9,11 +9,12 @@ function AppLayout() {
         <Link to="/">Restaurant App</Link>
         <RNavbar
           navElements={[
-            { label: "About", link: { path: "/about" } },
             {
               label: "Menu",
               link: { path: "/menu" },
             },
+            { label: "About", link: { path: "/about" } },
+
             {
               label: "Contact",
               link: { path: "/contact" },

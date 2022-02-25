@@ -11,7 +11,7 @@ function AdminPage() {
   return (
     <article>
       <section className="main">
-        admin page {JSON.stringify(isAuthenticated)}
+        admin page
         <section>
           {!isAuthenticated ? (
             isMember ? (
