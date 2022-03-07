@@ -1,6 +1,6 @@
 import { useQuery } from "@apollo/client";
 import { EXCHANGE_RATES } from "../../apollo-wrapper";
-import { mockRestaurantData } from "../../api";
+import { mockBookData } from "../../api";
 import RNavbar from "../NavBar/AppNavBar";
 import AboutPage from "../../pages/About";
 import "./App.css";
@@ -13,7 +13,7 @@ import AdminPage from "../../pages/Admin";
 import SignUpForm from "../../pages/Admin/SignupForm";
 import HomePage from "../../pages/Home";
 function App() {
-  /* TODO: re-implement once querying restaurant app endpoint
+  /* TODO: re-implement once querying book app endpoint
   // const { data, loading, error } = useQuery(EXCHANGE_RATES);
   // (loading) return <div>Loading...</div>;
   // (error) return <div>Error :(</div>;

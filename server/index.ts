@@ -6,67 +6,7 @@ const neo4j = neo4jDriver;
 
 // TODO: update to Book App type defs
 
-const typeDefs = gql`
-  type RestaurantApp {
-    id: ID!
-    restaurants: [Restaurant!] @relationship(type: "INCLUDED_IN", direction: IN)
-  }
-
-  type Restaurant {
-    id: ID!
-    name: String!
-    menus: [Menu!] @relationship(type: "INCLUDED_IN", direction: OUT)
-    location: Location!
-    contact: Contact!
-  }
-
-  type Contact {
-    phone: Int!
-    email: String!
-    post: Location!
-  }
-
-  type Location {
-    address1: String!
-    city: String!
-    state: String!
-    zip: Int!
-  }
-
-  type Menu {
-    id: ID!
-    name: String!
-    menuItems: [MenuItem!] @relationship(type: "FEATURED_IN", direction: IN)
-  }
-
-  type MenuItem {
-    id: ID!
-    name: String!
-    price: Float!
-    description: String!
-    featuredInMenu: [Menu!] @relationship(type: "FEATURED_IN", direction: OUT)
-    nutritionFacts: NutritionFacts!
-  }
-
-  type NutritionFacts {
-    id: ID!
-    servingSize: String
-    servingsPer: String
-    amountPer: String
-    tableValues: NutritionFactTableValue!
-      @relationship(type: "NUTRITION_FACTS_OF", direction: OUT)
-  }
-
-  type NutritionFactTableValue {
-    label: String!
-    weight: Float!
-    unitOfMeasure: String!
-    dailyValuePercentage: Float!
-    facts: NutritionFacts!
-      @relationship(type: "NUTRITION_FACTS_OF", direction: OUT)
-    meta: [String]
-  }
-`;
+const typeDefs = gql``;
 
 const driver = neo4j.driver(
   process.env.DB_ENDPOINT as string,
