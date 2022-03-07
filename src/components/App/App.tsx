@@ -1,7 +1,7 @@
 import { useQuery } from "@apollo/client";
 import { EXCHANGE_RATES } from "../../apollo-wrapper";
 import { mockRestaurantData } from "../../api";
-import RNavbar from "../RNavBar/RNavBar";
+import RNavbar from "../NavBar/AppNavBar";
 import AboutPage from "../../pages/About";
 import "./App.css";
 import { Link, Route, Routes } from "react-router-dom";

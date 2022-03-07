@@ -4,6 +4,8 @@ import neo4jDriver from "neo4j-driver";
 import "dotenv/config";
 const neo4j = neo4jDriver;
 
+// TODO: update to Book App type defs
+
 const typeDefs = gql`
   type RestaurantApp {
     id: ID!

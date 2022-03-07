@@ -1,17 +1,17 @@
 import { Link, Outlet } from "react-router-dom";
-import RNavbar from "../components/RNavBar/RNavBar";
+import RNavbar from "../components/NavBar/AppNavBar";
 import "./page-layout.css";
 function AppLayout() {
   return (
     <div className="page-layout-wrapper">
       <header className="page-header">
         {/** if isAdmin show Admin label next to title */}
-        <Link to="/">Restaurant App</Link>
+        <Link to="/">Books App</Link>
         <RNavbar
           navElements={[
             {
-              label: "Menu",
-              link: { path: "/menu" },
+              label: "Books",
+              link: { path: "/books" },
             },
             { label: "About", link: { path: "/about" } },
 

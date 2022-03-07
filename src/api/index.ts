@@ -1,5 +1,6 @@
 import { makeVar } from "@apollo/client";
 export const MOCK_DATA = {
+  // TODO: update to books mock data
   id: "Bedrock Restaurants",
   restaurants: [
     {
