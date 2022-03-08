@@ -1,8 +1,8 @@
 import { Link } from "react-router-dom";
 
-function RNavbar(props: NavOptions) {
+function Navbar(props: NavOptions) {
   return (
-    <nav className="r-navbar-wrapper">
+    <nav className="navbar-wrapper">
       <ul
         style={{
           display: "flex",
@@ -26,4 +26,4 @@ function RNavbar(props: NavOptions) {
   );
 }
 
-export default RNavbar;
+export default Navbar;
