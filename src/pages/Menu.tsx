@@ -1,9 +1,9 @@
-function MenuPage() {
+function BookListPage() {
   return (
     <article>
-      <section className="main">menu page</section>
+      <section className="main">book list page</section>
     </article>
   );
 }
 
-export default MenuPage;
+export default BookListPage;
