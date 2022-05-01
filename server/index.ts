@@ -4,7 +4,7 @@ import neo4jDriver from "neo4j-driver";
 import "dotenv/config";
 const neo4j = neo4jDriver;
 
-// TODO: update to Book App type defs
+// TODO: update to Contacts App type defs
 
 const typeDefs = gql``;
 
