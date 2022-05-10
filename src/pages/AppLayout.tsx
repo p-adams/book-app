@@ -6,15 +6,15 @@ function AppLayout() {
     <div className="page-layout-wrapper">
       <header className="page-header">
         <Link to="/">Contacts App</Link>
-        <AppNavbar
-          navElements={[
-            {
-              label: "Contact List",
-              link: { path: "/contacts" },
-            },
-          ]}
-        />
       </header>
+      <AppNavbar
+        navElements={[
+          {
+            label: "Contact List",
+            link: { path: "/contacts" },
+          },
+        ]}
+      />
       <Outlet />
       <footer>footer</footer>
     </div>
