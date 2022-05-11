@@ -5,7 +5,11 @@ export const MOCK_DATA = {
   contacts: [
     {
       id: "0",
-      fullName: "John Smith",
+      fullname: "John Smith",
+    },
+    {
+      id: "1",
+      fullname: "Mary Smith",
     },
   ],
 };

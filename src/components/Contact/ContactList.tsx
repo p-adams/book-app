@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { mockContactListData } from "../../api/index";
 
 function ContactList() {
@@ -6,7 +7,9 @@ function ContactList() {
       contact list{" "}
       <ul>
         {mockContactListData().contacts.map((el, i) => (
-          <li key={i}>{el.fullName}</li>
+          <li key={i}>
+            <Link to={el.id}>{el.fullname}</Link>
+          </li>
         ))}
       </ul>
     </article>

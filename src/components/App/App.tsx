@@ -7,7 +7,7 @@ import "./App.css";
 import { Link, Route, Routes } from "react-router-dom";
 import AppLayout from "../../pages/AppLayout";
 import NotFound from "../../pages/NotFound";
-import ContactsListPage from "../../pages/ContactsList";
+import ContactCard from "../Contact/ContactCard";
 import HomePage from "../../pages/Home";
 function App() {
   /* TODO: re-implement once querying book app endpoint
@@ -19,8 +19,8 @@ function App() {
     <div className="App">
       <Routes>
         <Route path="/" element={<AppLayout />}>
+          <Route path="/:id" element={<ContactCard />}></Route>
           <Route index element={<HomePage />}></Route>
-          <Route path="contacts" element={<ContactsListPage />}></Route>
           <Route path="*" element={<NotFound />} />
         </Route>
       </Routes>

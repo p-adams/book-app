@@ -3,9 +3,10 @@
   display: grid;
   grid-template-areas:
     "header header"
-    "contact-list-wrapper main"
+    "contact-list-wrapper contact-card-wrapper"
     "footer footer";
   grid-template-rows: 140px 500px;
+  grid-template-columns: 300px 1fr;
 }
 
 .page-header {
@@ -14,6 +15,11 @@
 
 .contact-list-wrapper {
   grid-area: contact-list-wrapper;
+}
+
+.contact-card-wrapper {
+  border: 1px solid;
+  grid-area: contact-card-wrapper;
 }
 
 .main {

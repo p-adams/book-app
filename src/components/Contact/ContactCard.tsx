@@ -1,5 +1,8 @@
+import { useParams } from "react-router-dom";
+
 function ContactCard() {
-  return <article>contact card</article>;
+  const { id } = useParams();
+  return <article className="contact-card-wrapper">contact card {id}</article>;
 }
 
 export default ContactCard;
