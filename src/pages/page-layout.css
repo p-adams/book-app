@@ -3,18 +3,17 @@
   display: grid;
   grid-template-areas:
     "header header"
-    "navbar-wrapper main"
+    "contact-list-wrapper main"
     "footer footer";
-  grid-template-rows: 100px 500px;
+  grid-template-rows: 140px 500px;
 }
 
 .page-header {
   grid-area: header;
 }
 
-.navbar-wrapper {
-  grid-area: navbar-wrapper;
-  border: 1px solid red;
+.contact-list-wrapper {
+  grid-area: contact-list-wrapper;
 }
 
 .main {
